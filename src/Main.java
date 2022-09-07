@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
         task1_1();task1_2();task1_3();task1_4();
         task2_1();task2_2();task2_3();
+        task3_1();task3_2();
     }
 
     public static void task1_1() {
@@ -72,6 +73,34 @@ public class Main {
 
         for (int i = 1; i <= 512; i = i * 2) {
             System.out.println(i);
+        }
+    }
+
+    public static void task3_1(){
+        System.out.println("");
+        System.out.println("Задание №3.1");
+
+        int payment = 29_000;
+        int deposit = 0;
+        for (int i = 1; i <= 12; i++) {
+            deposit = deposit + payment;
+            System.out.println("Месяц №" + i + ", сумма вклада - " + deposit);
+        }
+    }
+
+    public static void task3_2(){
+        System.out.println("");
+        System.out.println("Задание №3.2");
+
+        int payment = 29_000;
+        double deposit = 0;
+        double percentYear = 12;
+
+        double percentMonth = (percentYear / 12)/100;
+        for (int i = 1; i <= 12; i++) {
+            deposit = (deposit + (deposit * percentMonth));
+            deposit = deposit + payment;
+            System.out.println("Месяц №" + i + ", сумма вклада - " + deposit);
         }
     }
 
